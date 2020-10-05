@@ -1,11 +1,9 @@
 spring:
   application:
-    name: eureka-server
+    name: eureka-client-article-service
 server:
-  port: 9600
+  port: 9602
 eureka:
   client:
-    register-with-eureka: false
-    fetch-registry: false
     service-url:
       defaultZone: http://localhost:9600/eureka/
