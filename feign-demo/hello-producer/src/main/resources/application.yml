@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: hello-producer
+server:
+  port: 9601
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9600/eureka/

@@ -18,8 +18,23 @@ public class ArticleController {
     @Autowired
     private RestTemplate restTemplate;
 
+    /**
+     * 直接通过项目的访问地址来调用
+     *
+     * @return
+     */
     @GetMapping("/callHello")
     public String callHello() {
         return restTemplate.getForObject("http://localhost:9601/user/hello", String.class);
+    }
+
+    /**
+     * 通过eureka注册服务来调用
+     *
+     * @return
+     */
+    @GetMapping("/callHello2")
+    public String callHello2() {
+        return restTemplate.getForObject("http://eureka-client-user-service/user/hello", String.class);
     }
 }
