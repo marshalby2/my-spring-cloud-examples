@@ -1,9 +1,0 @@
-spring:
-  application:
-    name: eureka-client-article-service
-server:
-  port: 9602
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:9600/eureka/
