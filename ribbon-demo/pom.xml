@@ -61,6 +61,7 @@
     <modules>
         <module>eureka-server</module>
         <module>user-service</module>
+        <module>order-service</module>
     </modules>
 
 </project>

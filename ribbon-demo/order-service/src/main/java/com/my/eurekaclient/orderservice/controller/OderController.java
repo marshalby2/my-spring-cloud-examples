@@ -1,10 +1,10 @@
 package com.my.eurekaclient.orderservice.controller;
 
+import com.my.eurekaclient.orderservice.service.OderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
 
 /**
  * @Description TODO
@@ -16,12 +16,11 @@ import org.springframework.web.client.RestTemplate;
 public class OderController {
 
     @Autowired
-    private RestTemplate restTemplate;
+    private OderService oderService;
 
     @GetMapping("/getCurrentUser")
     public String getCurrentUser() {
-        // 调用 user-service 的 getCurrentUser 接口
-        return restTemplate.getForObject("http://user-service/user/getCurrentUser", String.class);
+        return oderService.getCurrentUser();
     }
 
 }
