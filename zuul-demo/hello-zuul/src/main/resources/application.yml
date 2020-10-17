@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: hello-zuul
+zuul:
+  routes:
+    my.path: /blog/**
+    my.url: http://www.yunxincoder.cn/
