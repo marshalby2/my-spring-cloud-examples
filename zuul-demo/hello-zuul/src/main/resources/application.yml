@@ -1,6 +1,8 @@
 spring:
   application:
     name: hello-zuul
+# 启动项目后，访问http://localhost:8080/blog可以看到最终的页面效果是
+#  http://www.yunxincoder.cn/的页面
 zuul:
   routes:
     my.path: /blog/**

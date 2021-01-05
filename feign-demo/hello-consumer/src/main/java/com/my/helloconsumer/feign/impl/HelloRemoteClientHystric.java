@@ -10,6 +10,8 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class HelloRemoteClientHystric implements HelloRemoteClient {
+
+    // 错误回调，当调用其他服务出错是，返回这个
     @Override
     public String hello(String name) {
         return "sorry, system error";

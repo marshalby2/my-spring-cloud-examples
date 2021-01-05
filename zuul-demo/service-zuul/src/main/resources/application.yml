@@ -7,3 +7,11 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:9600/eureka/
+
+# 作以下配置后，浏览器访问http://localhost:9602/api-a/hello，会返回
+# http://localhost:9601/hello的返回值
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: service-hello
